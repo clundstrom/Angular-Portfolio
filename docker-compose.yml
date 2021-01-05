@@ -1,0 +1,45 @@
+version: "3.7"
+
+services:
+  api:
+    container_name: api
+    build: ./api/
+    ports:
+      - 5000:8080
+    working_dir: /api
+    command: bash -c "uwsgi --ini config.ini"
+
+  # Compiles a mirroring Angular dev-server for the BIND_DIR folder.
+  frontend-live_compile:
+    container_name: frontend-live_compile
+    build: ./frontend
+    working_dir: /frontend
+    env_file:
+      - .env
+    volumes:
+      - type: bind
+        source: "${BIND_DIR}"
+        target: /frontend
+    ports: 
+      - 4200:4200
+    command: ng serve --host 0.0.0.0 --poll 1
+  
+  # Compiles a production image.
+  frontend-prod:
+    container_name: frontend-prod
+    build: ./frontend
+    volumes:
+      - type: bind
+        source: "${BIND_DIR}"
+        target: /frontend
+    command: ng build --prod
+
+ # nginx:
+  #   image: nginx:1.19.1-alpine
+  #   ports:
+  #     - 80:80
+  #     - 443:81
+  
+  #certbot:
+   # image: certbot/certbot
+    #entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'" # check for renewal every 12 hours

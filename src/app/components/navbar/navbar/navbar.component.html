@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" id="initials" routerLink="/"><img id="logo" src="../../../../assets/images/logo3.png"></a>
+  <img id="autograph" src="../../../../assets/images/logo5.png">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+          aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': isShown }" id="navbarToggler">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li><a href="https://github.com/clundstrom"><img id="git" src="../../../../assets/images/github.png"/></a></li>
+      <li><a href="https://www.linkedin.com/in/christoffer-lundstr%C3%B6m-655bb9172/"><img id="linked" src="../../../../assets/images/linked_in.png"/></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" (click)="scrollTop()">Home<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/status"><span class="online" *ngIf="apiOnline === true; else offline">API</span></a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" routerLink="/about" (click)="scrollTop()">About<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/blog" (click)="scrollTop()">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/projects" (click)="scrollTop()">Projects</a>
+      </li>
+      <li class="nav-item" [hidden]="!loggedIn">
+        <a class="nav-link"><span>|</span></a>
+      </li>
+      <li class="nav-item" [hidden]="!loggedIn">
+        <a class="nav-link" routerLink="/admin"><span>Admin</span></a>
+      </li>
+      <li class="nav-item" [hidden]="loggedIn" (click)="scrollTop()">
+        <a class="nav-link" routerLink="/login" (click)="scrollTop()"><span uk-icon="icon: cog"></span></a>
+      </li>
+      <li class="nav-item" [hidden]="!loggedIn">
+        <a class="nav-link" routerLink (click)="signout()"><span uk-icon="icon: sign-out"></span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<ng-template #offline>
+  <span class="offline">API</span>
+</ng-template>

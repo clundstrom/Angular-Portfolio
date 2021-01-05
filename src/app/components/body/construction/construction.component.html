@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="intro">
+    <a href="https://github.com/clundstrom"><img id="git" src="../../../../assets/vector/github_logo.svg"/></a>
+    <a href="https://www.linkedin.com/in/christoffer-lundstr%C3%B6m-655bb9172/"><img id="linked"
+                                                                                     src="../../../../assets/images/linked_in.png"/></a>
+    <h1 class="">API STATUS</h1> <h1 *ngIf="status === true; else offline" class="text-success">ONLINE</h1>
+    <hr>
+    <span>contact@lundstrom.io</span><br>
+  </div>
+</div>
+<ng-template #offline>
+  <h1 class="text-danger">
+    OFFLINE
+  </h1>
+
+</ng-template>
+

@@ -1,0 +1,96 @@
+@import "../../../../colourPalette";
+
+.navbar {
+  background-color: $navbarcolour;
+  position: fixed;
+  width: 100%;
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  border: 0;
+  font-size: 11px;
+  letter-spacing: 4px;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+@keyframes expandNavItemBorder {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+#initials:hover {
+  color: white;
+}
+
+li.nav-item a {
+  color: $navbarText;
+  border-bottom: 1px solid transparent;
+  word-wrap: normal;
+}
+
+li.nav-item a:hover {
+  color: #ffffff;
+  animation-name: expandNavItemBorder;
+  animation-duration: .2s;
+  border-bottom: 1px solid white;
+}
+
+li.nav-item a:focus {
+  color: $tertiaryText;
+}
+
+#linked {
+  opacity: 0.7;
+  bottom: 0px;
+  margin-top: 5px;
+  max-height: 2em;
+}
+
+#logo {
+  opacity: 0.7;
+  max-height: 2em;
+  margin-right: 1em;
+  margin-bottom: 4px;
+}
+
+#autograph {
+  height: 3em;
+
+}
+
+#logo:hover {
+  opacity: 1;
+}
+
+#linked:hover {
+  opacity: 1.0;
+}
+
+#git:hover {
+  opacity: 1.0;
+}
+
+#git {
+  margin-top: 5px;
+  max-height: 2em;
+  background-color: white;
+  opacity: 0.7;
+  margin-right: 1em;
+}
+
+#snowControl{
+  margin-right: 20rem;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.offline {
+  color: yellow;
+}
+.online {
+  color: dodgerblue;
+}

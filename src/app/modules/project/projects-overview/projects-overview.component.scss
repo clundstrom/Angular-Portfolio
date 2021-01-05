@@ -1,0 +1,94 @@
+@import "../../../../colourPalette";
+
+.wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 80%;
+}
+
+hr {
+  text-align: center;
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: dodgerblue;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0 1em 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  .wrapper {
+    transition: ease all .5s;
+    transform: translateY(7rem);
+    margin-bottom: 3em;
+    background-color: $blogEntryBg;
+    border-radius: 5px;
+    padding: 40px;
+  }
+
+  .header {
+    max-height: 20em;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+      padding: 0;
+      max-height: 20em;
+    }
+  }
+
+  .body{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .editposts {
+    float: right;
+    margin-right: 10px;
+  }
+
+  .projects {
+    padding: 10px 10px 10px 10px;
+    min-height: 17em;
+  }
+}
+
+// MOBILE
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    transition: ease all .5s;
+    height: 100%;
+    width: 100%;
+    transform: translateY(7rem);
+    margin-bottom: 3em;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .header {
+    max-height: 20em;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+  }
+  .projects {
+    padding: 10px 10px 10px 10px;
+    min-height: 17em;
+  }
+
+  .body{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+}

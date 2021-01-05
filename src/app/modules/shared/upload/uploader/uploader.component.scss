@@ -1,0 +1,19 @@
+@import "../../../../../colourPalette";
+
+.dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 20em;
+  height: 10em;
+  border: 2px dashed black;
+  background-color: $background;
+  color: $primaryText;
+
+  &.hovering {
+    border: 2px solid black;
+    background-color: white;
+  }
+}

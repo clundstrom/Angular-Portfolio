@@ -1,0 +1,38 @@
+@import "../../../../colourPalette";
+
+
+.admin-panel {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height:50%;
+  background: $background;
+  z-index: 1;
+  padding: 0;
+  margin-bottom: 10em;
+  border: 0;
+}
+
+.panel-bg {
+  background: $navbarcolour;
+  border: 0;
+}
+li.nav-item a {
+  color: $navbarText;
+}
+
+li.nav-link a, a:hover, a:active, a:focus {
+  border: 0;
+  background-color: dodgerblue;
+  box-shadow: none;
+}
+
+.nav-tabs .nav-link {
+  border: 0;
+}
+.nav-tabs .nav-link.active {
+  border: 0;
+  background-color: dodgerblue;
+}

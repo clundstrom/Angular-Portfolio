@@ -1,0 +1,15 @@
+<button class="btn btn-primary mt-2 submit">Upload</button>
+<input class="btn btn-success form-group form-control-file mt-2" type="file" (change)="onDrop($event.target.files)">
+<div class="dropzone"
+     appDropzone
+     (hovered)="toggleHover($event)"
+     (dropped)="onDrop($event)"
+     [class.hovering]="isHovering">
+
+  <span class="align-content-center">Drag and drop!</span>
+</div>
+<div *ngFor="let file of files">
+  <app-upload-task
+    [file]="file"
+  ></app-upload-task>
+</div>

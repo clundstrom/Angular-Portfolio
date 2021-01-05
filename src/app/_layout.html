@@ -1,0 +1,13 @@
+<div class="pagewrapper">
+  <div id="navbar">
+    <app-navbar></app-navbar>
+<!--    <app-christmas></app-christmas>-->
+  </div>
+  <div id="body" *ngIf="!isIE() else ie" >
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<ng-template #ie >
+  <app-notsupported></app-notsupported>
+</ng-template>

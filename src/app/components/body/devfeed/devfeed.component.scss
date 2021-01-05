@@ -1,0 +1,53 @@
+@import "../../../../colourPalette";
+
+.text{
+  color: white;
+  word-wrap: break-word;
+
+}
+
+h4 {
+  color: $link-hover;
+}
+.activity-feed {
+  padding: 15px;
+  border: 0px solid dodgerblue;
+  margin-right: 2em;
+  background-color: transparent;
+  border-radius: 15px;
+}
+.activity-feed .feed-item {
+  position: relative;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  border-left: 2px solid dodgerblue;
+}
+.activity-feed .feed-item:last-child {
+  border-color: transparent;
+}
+.activity-feed .feed-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background: dodgerblue;
+  border: 1px solid dodgerblue;
+}
+.activity-feed .feed-item .date {
+  position: relative;
+  top: -5px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.activity-feed .feed-item .text {
+  position: relative;
+  top: -3px;
+}
+
+

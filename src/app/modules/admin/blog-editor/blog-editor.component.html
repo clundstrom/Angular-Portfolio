@@ -1,0 +1,70 @@
+<div class="container-fluid">
+  <div class="row pt-5"></div>
+  <div class="row pt-5"></div>
+  <div class="container blogfeed">
+    <app-blogentry-detail [post]="this.publishable"></app-blogentry-detail>
+  </div>
+</div>
+
+<div class="col-lg-6 editor">
+  <div class="form-inline">
+    <form [formGroup]="editorForm" class="row">
+      <div class="col">
+        <input class="form-control" [(ngModel)]="publishable.title" formControlName="header" placeholder="Title">
+      </div>
+      <div class="col">
+        <input class="form-control" [(ngModel)]="publishable.imageUrl" formControlName="imageUrl"
+               placeholder="Thumbnail Image">
+      </div>
+      <div class="col">
+        <input class="form-control" [(ngModel)]="publishable.author" formControlName="author" placeholder="author">
+      </div>
+      <div class="form-check-inline">
+        <input class="form-check-input" [(ngModel)]="publishable.hidden" formControlName="hidden" type="checkbox"
+               id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">Hidden</label>
+      </div>
+      <div class="form-check-inline">
+        <input class="form-check-input" [(ngModel)]="isProject" (change)="convertToProject($event)"
+               formControlName="isProject" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Project</label>
+      </div>
+    </form>
+    <input class="form-control form-control-rounded" type="date" [(ngModel)]="datePick"
+           (ngModelChange)="convertTimestamp()">
+    <span class="ml-auto">Created: {{getCreated()}}</span>
+  </div>
+
+  <ng-template [ngIf]="this.isProject">
+    <div [formGroup]="projectSpecific">
+      <input class="form-control w-25" [(ngModel)]="publishable.fullPageImageUrl" formControlName="backgroundImage"
+             placeholder="Background image URL">
+      <input class="form-control w-25" [(ngModel)]="publishable.description" formControlName="description"
+             placeholder="Short description">
+      <div class="form-inline">
+        <input class="form-control" [(ngModel)]="publishable.srcURL" formControlName="srcURL" placeholder="Source URL">
+        <input class="form-control" formControlName="tag" placeholder="Tag">
+        <button class="btn btn-primary submit" (click)="addTag()">Add tag</button>
+      </div>
+    </div>
+    <br>
+    <div class="form-inline" *ngIf="publishable.tags">
+      <span class="tag-item m-1" *ngFor="let tag of publishable.tags">
+          <span uk-icon="icon: close" (click)="removeTag(tag)">{{tag}}</span>
+      </span>
+    </div>
+  </ng-template>
+  <md-editor name="Content"
+             [(ngModel)]="this.publishable.message"
+             [mode]="'editor'"
+             [options]="options"
+             required
+             maxlength="500">
+  </md-editor>
+  <button [disabled]="!hasFields()" class="btn btn-primary mt-2 submit" (click)="submit()">Submit</button>
+  <app-uploader></app-uploader>
+</div>
+
+
+
+

@@ -1,0 +1,21 @@
+<div class="wrapper" *ngIf="post">
+  <div class="blogentry">
+    <div class="header">
+      {{post.title}}
+      <a>
+        <span [hidden]="!loggedIn" class="editposts" uk-icon="icon: trash" (click)="delete(post)"></span>
+        <span [hidden]="!loggedIn" class="editposts" uk-icon="icon: pencil" (click)="edit(post)"></span>
+      </a>
+    </div>
+    <div class="author">
+      <span uk-icon="icon: clock"></span><span [innerText]="post.dateString"></span>- <span>By {{post.author}}</span>
+      <hr>
+    </div>
+    <div class="blogbody">
+      <div markdown katex [data]="post.message">
+      </div>
+    </div>
+  </div>
+</div>
+
+

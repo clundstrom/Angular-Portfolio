@@ -1,0 +1,95 @@
+@import "../../../../colourPalette";
+
+// MOBILE
+@media only screen and (max-width: 1000px) {
+  .feed {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    margin-top: 12em;
+    zoom: 0.8;
+  }
+
+  .container {
+    position: absolute;
+    margin-top: 5em;
+    text-align: center;
+    color: #dcdcdd;
+  }
+}
+
+
+// BIG SCREEN
+@media only screen and (min-width: 1000px) {
+  .feed {
+    margin: 7em 0em 0em 2em;
+    text-align: left;
+    position: absolute;
+    zoom: 0.8;
+    animation-name: fadeInAnimation;
+    animation-duration: 2s;
+
+  }
+  .container {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    text-align: center;
+    color: $primaryText;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  .intro {
+    left: 50%;
+    margin-top: 2em;
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #dcdcdd;
+  width: 20%;
+  margin: 10px auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 0px auto;
+  letter-spacing: 5px;
+  color: $tertiaryText;
+}
+h2 {
+  text-align: center;
+  margin: 0px auto;
+  letter-spacing: 5px;
+  color: $tertiaryText;
+}
+
+h3 {
+  text-align: center;
+  margin: 0px auto;
+  letter-spacing: 5px;
+  color: $tertiaryText;
+}
+
+
+span {
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  color: $tertiaryText;
+}
+
+#git {
+  width: 3em;
+}
+
+@keyframes fadeInAnimation {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}

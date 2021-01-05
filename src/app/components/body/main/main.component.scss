@@ -1,0 +1,218 @@
+@import "../../../../colourPalette";
+
+$backgroundUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-416e3.appspot.com/o/fELVv5.jpg?alt=media&token=eedb61dd-be4f-4e39-9681-540919421f45";
+$defaultBackgroundUrl: "../../../../assets/vector/bg.svg";
+
+p {
+  color: white;
+  text-shadow: 1px 1px gray;
+}
+h1 {
+  color: white;
+  text-shadow: 1px 1px gray;
+}
+
+h2 {
+  color: white;
+  text-shadow: 1px 1px gray;
+}
+
+h4 {
+  color: white;
+  text-shadow: 1px 1px gray;
+}
+
+
+
+@media only screen and (max-width: 360px) {
+  #photo {
+    transition: ease all .5s;
+    display: none;
+  }
+
+  .quote {
+    transition: ease all .5s;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin-top: 1em;
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  #photo {
+    transition: ease all .5s;
+    width: 50%;
+    margin-right: 2em;
+    height: auto;
+    border-radius: 50%;
+    float: top;
+    margin-top: 2em;
+  }
+
+  .wrapper {
+    transition: ease all .5s;
+    .courses {
+      display: none;
+      position: absolute;
+      top: 15%;
+      left: 0%;
+    }
+  }
+
+  .feed {
+    display: none;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    zoom: 0.8;
+    -moz-transform: scale(0.8);
+    -moz-transform-origin: 0 0;
+    margin-bottom: 1em;
+  }
+
+  .intro {
+    transition: ease all .5s;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .container {
+    position: absolute;
+    text-align: center;
+    color: #dcdcdd;
+  }
+
+
+  .christmas {
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    background: url($backgroundUrl) fixed;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(90deg, white, dodgerblue);
+    border-image-slice: 60 30;
+    z-index: 0;
+  }
+
+
+  .header {
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    background: url($defaultBackgroundUrl) no-repeat bottom center fixed;
+    background-size: cover;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(90deg, white, dodgerblue);
+    border-image-slice: 60 30;
+    z-index: 0;
+
+    .quote {
+      transition: ease all .5s;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  #photo {
+    transition: ease all .5s;
+    width: 20%;
+    margin-right: 2em;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+  }
+
+
+  .christmas {
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    background: url($backgroundUrl) fixed;
+    border-bottom: 15px solid;
+    border-image: linear-gradient(90deg, white, dodgerblue);
+    border-image: url("../../../../assets/curve1.svg");
+    border-image-slice: 60 30;
+    z-index: 0;
+  }
+
+  .header {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url($defaultBackgroundUrl) no-repeat center center fixed;
+    background-size: cover;
+
+    border-bottom: 15px solid;
+    border-image: linear-gradient(90deg, white, dodgerblue);
+    border-image: url("../../../../assets/curve1.svg");
+
+    border-image-slice: 60 30;
+    z-index: 0;
+  }
+  .wrapper {
+    transition: ease all .5s;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .courses {
+      position: absolute;
+      top: 5rem;
+      right: 30rem;
+    }
+  }
+
+  .intro {
+    transition: ease all .5s;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .feed {
+    margin: 6em 0 0 2em; // this should be done in component
+    position: absolute;
+    zoom: 0.8;
+    -moz-transform: scale(0.8);
+    -moz-transform-origin: 0 0;
+    animation-name: fadeInAnimation;
+    animation-duration: 2s;
+  }
+
+  .quote {
+    transition: ease all .5s;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+}
+
+
+
+

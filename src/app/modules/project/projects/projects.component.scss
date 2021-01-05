@@ -1,0 +1,68 @@
+p {
+  color: white;
+  text-shadow: 1px 1px gray;
+}
+h1 {
+  color: white;
+  text-shadow: 1px 1px gray;
+}
+
+h2 {
+  color: white;
+  text-shadow: 1px 1px gray;
+}
+
+h4 {
+  color: white;
+  text-shadow: 1px 1px gray;
+}
+
+hr {
+  color: white;
+  border: 2px solid;
+  border-radius: 25px;
+  text-shadow: 1px 1px gray;
+}
+
+.projects {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tags {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 1;
+  font-weight: bold;
+  width: 18.8em;
+}
+
+.tag-item{
+  background: none repeat scroll 0 0 #1ABC9C;
+  border-radius:5px;
+  color:#fff;
+  display:block;
+  padding:.5em;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.tag-src {
+  position: absolute;
+  width: 100%;
+  font-weight: bold;
+}
+
+.header {
+  position: absolute;
+  object-fit: cover;
+  max-height: 70%;
+  width: 100%;
+}

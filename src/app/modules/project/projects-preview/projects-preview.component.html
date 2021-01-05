@@ -1,0 +1,15 @@
+<div class="projects">
+  <div class="image-wrap" (click)="goToProject(this.project)">
+    <img [src]="project.imageUrl">
+    <div class="image-center">
+      <button class="btn btn-primary details">Details</button>
+    </div>
+  </div>
+  <div class="project-info">
+    <span class="card-title">{{project.title}}</span><br>
+    <span class="card-subtitle">{{project.description}}</span>
+  </div>
+  <div class="tags">
+    <div class="tag-item" *ngFor="let tag of project.tags">{{tag}}</div>
+  </div>
+</div>

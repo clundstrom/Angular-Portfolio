@@ -1,0 +1,42 @@
+<app-courses-add [addCourse]="this.tempCourse"></app-courses-add>
+<table class="table table-dark courseTable">
+  <thead>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Start</th>
+    <th scope="col">End</th>
+    <th scope="col">Points<br>Total: {{this.totalScore}}</th>
+    <th scope="col">Active</th>
+    <th scope="col">Completed<br>{{this.currentScore}}</th>
+    <th scope="col">Up next</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let course of courses">
+    <td>{{course.name}}</td>
+    <td>{{getTimeStamp(course.start)}}</td>
+    <td>{{getTimeStamp(course.end)}}</td>
+    <td>{{course.points}}
+    <td *ngIf="course.active == false else active"></td>
+    <td *ngIf="course.completed == false else complete"></td>
+    <td *ngIf="course.next == false else next"></td>
+    <td><span uk-icon="icon: pencil"data-toggle="modal" data-target="#courseModal" (click)="this.tempCourse = course"></span></td>
+    <td><span uk-icon="icon: trash" (click)="deleteCourse(this.course)"></span></td>
+
+    <ng-template #active>
+      <td width="10px" class="bg-primary cellWidth">
+      </td>
+    </ng-template>
+    <ng-template #complete>
+      <td class="bg-success cellWidth">
+      </td>
+    </ng-template>
+    <ng-template #next>
+      <td width="10px" class="bg-info cellWidth">
+      </td>
+    </ng-template>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,26 @@
+// LIGHT MODE
+$background: #eeeeee;
+$blockquote-color: #009ec0;
+$link-hover: white;
+$link-color: #0077aa;
+$tertiaryText: #dcdcdd;
+$secondaryText: gray;
+$primaryText: #3b454e;
+$footerColor: #314152;
+$blogEntryBg: #fbfbfb;
+$blogEntryAuthor: #4a4a4a;
+$svgcolours: dodgerblue;
+$footertextColour: black;
+$navbarcolour: #314152;
+$navbarText: #DCDCDD;
+$secondaryBackground: #506274;
+
+@mixin svgColour($color){
+  svg {
+    color: $color;
+    &:hover {
+      color: $color;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import "../../../../colourPalette";
+
+.progress-bg {
+  width: 25rem;
+  background: rgba($navbarcolour, 0.9);
+  clip-path: polygon(50% 0%, 100% 0, 100% 82%, 75% 100%, 25% 100%, 0 82%, 0 0);
+  position: absolute;
+  border-left: 2px solid dodgerblue;
+  border-right: 2px solid dodgerblue;
+  border-bottom: 6px solid dodgerblue;
+  border-top: 2px solid dodgerblue;
+  border-radius: 15px;
+  transform: translate(20%, -5%);
+}
+
+.standardHeight {
+  height: 13rem;
+}
+
+.hiddenHeight {
+  height: 3rem;
+  transform: translate(20%, -10%);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.show{
+  opacity: 1;
+}
+.button {
+  text-align: center;
+}
+
+.shadowed {
+  color: white;
+  text-shadow: 1px 1px gray;
+}
+
+.progress-wrapper {
+  z-index: 3;
+  position: absolute;
+  width: 20em;
+  overflow-y: visible;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .progress-bar {
+    color: white;
+    border-radius: 20px;
+    background-color: $navbarText;
+    border: 2px solid dodgerblue;
+  }
+
+  .progress {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    text-shadow: none;
+    height: 25px;
+    background: linear-gradient(90deg, #849cb0, $navbarcolour);
+    justify-content: right;
+    align-items: center;
+    display: flex;
+    float: right;
+    overflow: visible;
+  }
+
+  .dot {
+    height: 25px;
+    width: 25px;
+    background-color: dodgerblue;
+    //background: linear-gradient(90deg, silver, dodgerblue);
+    border-radius: 50%;
+    border: 1px solid $navbarcolour;
+    position: relative;
+    margin-left: 12.5px;
+    transform: translateX(50%);
+    //animation: spin linear infinite;
+    //animation-duration: 1s;
+  }
+
+
+  @keyframes spin {
+    0% {
+      transform: translateX(50%) rotateZ(0);
+    }
+    100% {
+      transform: translateX(50%) rotateZ(360deg);
+    }
+  }
+  .percentage {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: auto;
+    transform: translateX(50%);
+  }
+
+  .courses {
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: bold;
+    width: 50%;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+  }
+}

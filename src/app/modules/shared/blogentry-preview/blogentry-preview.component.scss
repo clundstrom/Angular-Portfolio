@@ -1,0 +1,85 @@
+@import "../../../../colourPalette";
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.1s cubic-bezier(.25,.8,.25,1);
+  position: relative;
+  width: 18rem;
+  height: 29rem;
+  margin-bottom: 3rem;
+  border: 0;
+
+  hr {
+    margin: auto;
+    margin-bottom: 10px;
+    width: 20%;
+  }
+
+  .card-header {
+    padding: 0;
+    margin: 0;
+    height: 10rem;
+    #quotemark {
+      width: 40%;
+      height: 40%;
+    }
+    img {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .card-title {
+    font-size: 12px;
+    margin: auto;
+    transform: translateY(-10px);
+    text-align: center;
+    padding: 10px 0 0 5px;
+    font-weight: bold;
+    width: 70%;
+    background-color: white;
+    color: $primaryText;
+    z-index: 2;
+
+    .card-subtitle{
+      padding: 10px;
+      font-size: 11px;
+      font-style: italic;
+      color: $secondaryText;
+    }
+  }
+
+  .card-body {
+    padding: 0;
+    margin: auto;
+    width: 80%;
+    height: 50%;
+    overflow: hidden;
+    color: $primaryText
+  }
+
+  .card-footer {
+    margin: auto;
+    background: none;
+
+    .btn-custom {
+      border: 2px solid dimgrey;
+      padding: 10px 20px;
+      background: 0;
+      color: dimgrey;
+      font-size: 11px;
+
+      &:hover{
+        color: dimgrey;
+        border: 2px solid dodgerblue;
+      }
+    }
+  }
+
+
+}

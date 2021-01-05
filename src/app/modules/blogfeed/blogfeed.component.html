@@ -1,0 +1,11 @@
+<div class="container blogfeed">
+  <div *ngIf="posts.length > 0 else loading">
+    <div *ngFor="let post of posts">
+      <app-blogentry-detail [post]="post"></app-blogentry-detail>
+    </div>
+    <div *ngIf="!outOfPosts && posts.length != 1" class="btn-primary text-center load-more" (click)="nextPage()">Load more results</div>
+  </div>
+  <ng-template #loading>
+    <mat-progress-spinner class="spinner" [color]="color" mode="indeterminate"></mat-progress-spinner>
+  </ng-template>
+</div>

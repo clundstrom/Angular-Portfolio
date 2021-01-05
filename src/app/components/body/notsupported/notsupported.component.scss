@@ -1,0 +1,27 @@
+.nosupport{
+  position: absolute;
+  left: 50%;
+  top:30%;
+  transform: translateX(-50%);
+}
+
+.white {
+  color: white;
+}
+
+
+.browser-list{
+  position: absolute;
+  left: 50%;
+  top:40%;
+  transform: translateX(-50%);
+
+  .browser{
+    display: inline-block;
+    margin-right: 1em;
+    width: 75px;
+    height: auto;
+  }
+}
+
+

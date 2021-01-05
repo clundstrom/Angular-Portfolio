@@ -1,0 +1,17 @@
+<div class="container-fluid wrapper">
+  <div class="projects">
+    <div class="header">
+      Featured
+    </div>
+      <hr>
+    <div *ngIf="this.empty == true">Oops, looks like this section is empty. Check back later!</div>
+    <div *ngIf="projects.length != 0 else loading"></div>
+      <div class="body" *ngFor="let project of projects">
+        <app-projects-preview [project]="project"></app-projects-preview>
+      </div>
+  </div>
+
+  <ng-template #loading>
+    <mat-progress-spinner *ngIf="loadPage" class="spinner" [color]="color" mode="indeterminate"></mat-progress-spinner>
+  </ng-template>
+</div>

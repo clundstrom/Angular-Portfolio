@@ -1,0 +1,107 @@
+@import "../../../../colourPalette";
+
+:host ::ng-deep .ngx-pagination {
+  padding-left: 0px !important;
+  background: $footerColor;
+  border-radius: 15px;
+}
+
+:host ::ng-deep .ngx-pagination .current,
+.btn-info {
+  background: dodgerblue !important;
+  border: transparent !important;
+  border-radius: 20px !important;
+}
+
+:host ::ng-deep .ngx-pagination .current:hover {
+  background: dodgerblue !important;
+  border-radius: 20px !important;
+  border: transparent !important;
+}
+
+:host ::ng-deep .ngx-pagination li a {
+  color: white;
+  border-radius: 20px !important;
+}
+
+:host ::ng-deep .ngx-pagination li a:hover {
+  border-radius: 20px !important;
+  background: dodgerblue;
+}
+
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: dodgerblue;
+}
+
+@media only screen and (max-width: 360px){
+}
+
+
+@media only screen and (max-width: 1220px) {
+  .feed {
+    transition: ease all .5s;
+    transform: translateY(65%);
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h2 {
+      margin: 0 auto;
+    }
+  }
+
+  .page-controls {
+    margin: 0 auto;
+    margin-bottom: 4em;
+  }
+
+}
+@media only screen and (min-width: 1221px) {
+
+  .feed {
+    transition: ease all .5s;
+    transform: translateY(65%);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10rem;
+    //background-color: $background;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h2 {
+      margin: 0 auto;
+    }
+  }
+
+  .page-controls {
+    position: absolute;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+  }
+
+  .flex-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cards {
+    padding: 1em;
+  }
+
+  .odd {
+    transform: translateY(20%);
+    margin-bottom: 4rem;
+  }
+}
+
+

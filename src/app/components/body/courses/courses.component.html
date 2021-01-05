@@ -1,0 +1,22 @@
+<div class="progress-bg" [ngClass]="hide===false ? 'progress-bg standardHeight': 'progress-bg'">
+  <div class="text-center">
+    <span (click)="hide = !hide" id="button" uk-icon="icon: chevron-up; ratio: 1.5"></span><br>
+  </div>
+  <div class="progress-wrapper shadowed" *ngIf="hide===false" [ngClass]="hide===false ? 'progress-wrapper shadowed': 'hidden'">
+    <span class="font-weight-bold">BSc Software Engineering CS</span>
+    <div class="progress-bar" style="width: 100%">
+      <div class="progress" role="progressbar" [style.width.%]="this.percent" aria-valuemin="0" aria-valuemax="100">
+        <span class="percentage">{{percent}}%</span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    <span class="courses">Current courses: <br>
+  <span *ngFor="let course of current">
+    {{course.name}}<br></span></span>
+
+    <span class="courses">Up next: <br>
+     <span *ngFor="let course of next">
+    {{course.name}}<br></span></span>
+  </div>
+</div>
+

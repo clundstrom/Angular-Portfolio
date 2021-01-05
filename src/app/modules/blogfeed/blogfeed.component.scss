@@ -1,0 +1,41 @@
+@import "../../../colourPalette";
+
+.blogfeed {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.load-more{
+  margin-top: -2em;
+  padding: 1em;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.spinner {
+  margin-top: 40%;
+  margin-left: 45%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .blogfeed {
+    transition: ease all .5s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    //background: $background;
+    transform: translateY(5rem);
+  }
+}
+
+//MOBILE
+@media only screen and (max-width: 1000px) {
+  .blogfeed {
+    transition: ease all .5s;
+    height: 100%;
+    width: 100%;
+    transform: translateY(6rem);
+  }
+}
+

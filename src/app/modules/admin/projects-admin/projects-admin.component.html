@@ -1,0 +1,30 @@
+<table class="table table-dark courseTable">
+  <thead>
+  <tr>
+    <th scope="col">Title</th>
+    <th scope="col">ID</th>
+    <th scope="col">Published</th>
+    <th scope="col">Hidden</th>
+    <th scope="col">Image</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Archive</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let project of projects">
+    <td>{{project.title}}</td>
+    <td>{{project.id}}</td>
+    <td>{{project.dateString}}</td>
+    <td>{{project.hidden}}</td>
+    <td *ngIf="project.imageUrl else none">
+      <img width="50px" height="50px" src="{{project.imageUrl}}">
+    </td>
+    <td><span uk-icon="icon: pencil"(click)="edit(project)"></span></td>
+    <td><span uk-icon="icon: trash" (click)="delete(project)"></span></td>
+  </tr>
+  </tbody>
+</table>
+
+<ng-template #none>
+  <td><img width="50px" height="50px" src="https://firebasestorage.googleapis.com/v0/b/portfolio-416e3.appspot.com/o/quote.png?alt=media&token=0bdae753-58dc-4aa0-9757-4d0e9a1fc974"></td>
+</ng-template>

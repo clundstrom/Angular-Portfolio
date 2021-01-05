@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div [ngClass]="(ngx.get('ThemeChristmas') === 'true') ? 'christmas' : 'header'">
+    <div class="quote">
+      <img id="photo" src="https://firebasestorage.googleapis.com/v0/b/portfolio-416e3.appspot.com/o/images%2F1584300762819_bio.jpg?alt=media&token=16ad093e-c8d2-473b-b4c5-b93e52da2799">
+      <h1>Hey! I'm Chris</h1>
+      <p>I'm a Software Engineer. My main field of study is Comp science with focus on embedded systems and IoT.
+        I write about software, tech and other passions of mine.
+        <br> Feel free to check out some of my projects!😀
+      </p>
+    </div>
+    <div class="intro">
+      <app-feed-preview></app-feed-preview>
+    </div>
+  </div>
+  <div class="courses">
+  <app-courses></app-courses>
+  </div>
+</div>
+
+

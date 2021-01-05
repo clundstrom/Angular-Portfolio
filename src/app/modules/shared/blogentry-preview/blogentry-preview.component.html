@@ -1,0 +1,19 @@
+<div class="card" *ngIf="post">
+  <div class="card-header">
+    <img id="quotemark"*ngIf="post.imageUrl == undefined || post.imageUrl == ''" src="https://firebasestorage.googleapis.com/v0/b/portfolio-416e3.appspot.com/o/quote.png?alt=media&token=0bdae753-58dc-4aa0-9757-4d0e9a1fc974">
+    <img *ngIf="post.imageUrl != ''" [src]="post.imageUrl">
+  </div>
+  <div class="card-title">
+    {{ post.title}}
+    <div class="card-subtitle">
+      {{post.dateString}}
+    </div>
+  </div>
+  <hr>
+  <div class="card-body" markdown [data]="post.message">
+  </div>
+  <div class="card-footer">
+    <button class="btn-custom" (click)="goToPost(this.post)">READ MORE</button>
+  </div>
+</div>
+

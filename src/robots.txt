@@ -1,0 +1,9 @@
+# Group 1
+User-agent: Googlebot
+Disallow: /login/
+
+# Group 2
+User-agent: *
+Allow: /
+
+Sitemap: https://www.lundstrom.io/sitemap.xml

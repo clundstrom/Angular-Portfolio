@@ -1,0 +1,77 @@
+@import "../../../../colourPalette";
+
+.projects {
+  width: 18rem;
+
+  .image-wrap {
+    width: 18rem;
+    position: relative;
+
+    &:hover img {
+      opacity: 0.3;
+      cursor: pointer;
+    }
+
+    &:hover .image-center {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    img {
+      width: 18rem;
+      max-height: 10rem;
+      transition: .5s ease;
+      opacity: 1;
+      backface-visibility: hidden;
+    }
+
+    .image-center {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transition: .5s ease;
+      opacity: 0;
+
+      .details {
+        padding: 1em;
+      }
+    }
+  }
+
+  .project-info{
+    text-align: center;
+    .card-title {
+      font-size: 12px;
+      font-weight: bold;
+      color: $primaryText;
+      text-align: center;
+    }
+    .card-subtitle{
+      padding: 10px;
+      font-size: 11px;
+      font-style: italic;
+      font-weight: bold;
+      color: $secondaryText;
+    }
+  }
+
+  .tags {
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .tag-item{
+      background: none repeat scroll 0 0 #1ABC9C;
+      border-radius:5px;
+      color:#fff;
+      display:block;
+      padding:.5em;
+      margin: .5em;
+      text-align: center;
+    }
+  }
+}
+

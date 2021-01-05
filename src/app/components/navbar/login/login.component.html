@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="loginForm">
+    <span class="signin">Authentication</span>
+    <div class="form-group">
+      <form [formGroup]="loginForm">
+        <div class="form-button">
+          <span class="signin" uk-icon="icon: user"></span><input class="input" formControlName="email" placeholder="Email"><br>
+        </div>
+        <div class="form-button">
+          <span class="signin" uk-icon="icon: lock"></span><input type="password" class="input" formControlName="password" placeholder="Password">
+        </div>
+      </form>
+    </div>
+    <button class="btn btn-lg btn-primary form-login-btn" (click)="login()" [disabled]="hasEmptyFields()">Sign in</button>
+
+    <div [hidden]="!authenticated" class="alert alert-success login-result">
+      <strong>Success!</strong>
+    </div>
+
+    <div [hidden]="!showError" class="alert alert-danger login-result">
+      <strong>Login failed.</strong>
+    </div>
+  </div>
+</div>

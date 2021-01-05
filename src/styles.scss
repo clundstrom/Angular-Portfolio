@@ -1,0 +1,223 @@
+@import "~prismjs/plugins/toolbar/prism-toolbar.css";
+@import "colourPalette";
+
+
+html, body {
+  background: -moz-linear-gradient(180deg, #213453, #849cb0) fixed; /* FF 3.6+ */
+  background: -ms-linear-gradient(180deg, #213453, #849cb0) fixed; /* IE10 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #213453), color-stop(100%, #849cb0)); /* Safari 4+, Chrome 2+ */
+  background: -webkit-linear-gradient(180deg, #213453, #849cb0) fixed; /* Safari 5.1+, Chrome 10+ */
+  background: -o-linear-gradient(180deg, #213453, #849cb0) fixed; /* Opera 11.10 */
+  background: linear-gradient(180deg, #213453, #849cb0) fixed;
+  z-index: 1;
+}
+
+font {
+  font-family: Ubuntu, sans-serif, Roboto, 'Montserrat Light', Montserrat, sans-serif;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  word-wrap: break-word;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+p {
+  word-wrap: break-word;
+  color: $primaryText;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+li {
+  color: $primaryText;
+}
+
+h1, h2, h3, h4, h5 {
+  color: $primaryText;
+}
+
+svg {
+  color: $svgcolours;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+blockquote {
+  font-size: 1em;
+  width: 60%;
+  margin: 50px auto;
+  font-style: italic;
+  color: $primaryText;
+  padding: 1em 30px 1em 75px;
+  border-left: 8px solid $blockquote-color;
+  line-height: 1;
+  position: relative;
+}
+
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: $blockquote-color;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+blockquote::after {
+  content: '';
+}
+
+blockquote span {
+  display: block;
+  color: $primaryText;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+
+// UK ICON
+
+.uk-icon {
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  border: none;
+  /* 3 */
+  border-radius: 0;
+  /* 4 */
+  overflow: visible;
+  /* 5 */
+  font: inherit;
+  color: inherit;
+  /* 6 */
+  text-transform: none;
+  /* 7. */
+  padding: 0;
+  background-color: transparent;
+  /* 8 */
+  display: inline-block;
+  /* 9 */
+  fill: currentcolor;
+  /* 10 */
+  line-height: 0;
+}
+
+/* Required for `button`. */
+button.uk-icon:not(:disabled) {
+  cursor: pointer;
+}
+
+/*
+ * Remove the inner border and padding in Firefox.
+ */
+.uk-icon::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * Set the fill and stroke color of all SVG elements to the current text color
+ */
+.uk-icon:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+  fill: currentcolor;
+}
+
+.uk-icon:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+  stroke: currentcolor;
+}
+
+/*
+ * Fix Firefox blurry SVG rendering: https://bugzilla.mozilla.org/show_bug.cgi?id=1046835
+ */
+.uk-icon > * {
+  transform: translate(0, 0);
+}
+
+/* Image modifier
+ ========================================================================== */
+/*
+ * Display images in icon dimensions
+ */
+.uk-icon-image {
+  width: 20px;
+  height: 20px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+/* Style modifiers
+ ========================================================================== */
+/*
+ * Link
+ */
+.uk-icon-link {
+  color: #999;
+}
+
+.uk-icon-link:hover,
+.uk-icon-link:focus {
+  color: #666;
+  outline: none;
+}
+
+/* OnClick + Active */
+.uk-icon-link:active,
+.uk-active > .uk-icon-link {
+  color: #595959;
+}
+
+/*
+ * Button
+ * 1. Center icon vertically and horizontally
+ */
+.uk-icon-button {
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  border-radius: 500px;
+  background: #f8f8f8;
+  color: #999;
+  vertical-align: middle;
+  /* 1 */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease-in-out;
+  transition-property: color, background-color;
+}
+
+/* Hover + Focus */
+.uk-icon-button:hover,
+.uk-icon-button:focus {
+  background-color: #ebebeb;
+  color: #666;
+  outline: none;
+}
+
+/* OnClick + Active */
+.uk-icon-button:active,
+.uk-active > .uk-icon-button {
+  background-color: #dfdfdf;
+  color: #666;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

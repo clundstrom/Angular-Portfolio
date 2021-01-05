@@ -1,0 +1,7 @@
+<h4>Development</h4>
+<div class="activity-feed" >
+  <div *ngFor="let item of feed" class="feed-item" >
+    <div class="date">{{item.dateString}}</div>
+    <div class="text" [innerHTML]="item.message"></div>
+  </div>
+</div>

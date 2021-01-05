@@ -1,0 +1,17 @@
+<div *ngIf="project">
+  <img class="header" src="{{project.fullPageImageUrl}}">
+  <div class="row">
+    <div class="tags">
+      <div class="list-inline text-center">
+        <div class="list-inline-item" *ngFor="let tag of project.tags">
+          <span class="tag-item"> {{tag}}</span>
+        </div>
+      </div>
+      <a href="{{project.srcURL}}"><span class="btn btn-primary tag-src"><img style="margin-right: 5px" width="25px"
+                                                                              src="../../../../assets/images/github.png">View Source</span></a>
+    </div>
+  </div>
+  <div class="container projects">
+    <app-blogentry-detail [post]="project"></app-blogentry-detail>
+  </div>
+</div>
